@@ -15,8 +15,7 @@ function App() {
   return (
     <>
     <div className="container mt-5">
-     {/* <h2>Значение: {value}</h2>
-      <Range onSliderChange={handleSliderChange} />*/} 
+    
 
       <MainBasket>
         <CartBasket />
