@@ -58,8 +58,8 @@ function CountryTable({title,  onSelectContry}) {
          })}
         </tbody>
       </table>
-      <div className="p-5 tex-center" onClick={loadMore}>
-        <button className="btn btn-success"> загрузить</button>
+      <div className="p-5 tex-center" >
+        <button className="btn btn-success" onClick={loadMore}> загрузить</button>
       </div>
     </div>
   );

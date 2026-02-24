@@ -6,6 +6,11 @@ import MainBasket from "./Component/MainBasket";
 import CartBasket from "./Component/CartBasket";
 import CountryTable from "./Component/CountryTable";
 import HomeWorckAlbums from "./Component/HomeWorckAlbums";
+import Header from "./Component/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import CountryPage from "./pages/CountryPage";
 
 function App() {
   const [value, setValue] = useState(0);
@@ -14,7 +19,7 @@ function App() {
     setValue(newValue);
   };
 
-  {/*const [selectedCountry, setSelectedCountry] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState([]);
   function selectCountry(country) {
     selectedCountry((selectCountry) => [...selectCountry, country]);
   }
@@ -22,20 +27,26 @@ function App() {
     setSelectedCountry((country) =>
       country.filter((value, index) => index !== indexRemove),
     );
-  }*/}
-
-  function remov(id){
-     
   }
+
   return (
     <>
       <div className="container mt-5">
-        {/*<MainBasket>
+          {/*<Header></Header>*/}
+
+        {/* <Router>
+         <Routes> 
+         <Route path="/" element={<HomePage></HomePage>}> 
+         <Route path="/about" element={<AboutPage></AboutPage>}>
+         </Route> <Route path="/counry" element={<CountryPage>
+         </CountryPage>}></Route> </Route> </Routes> 
+        </Router>*/}
+         {/*<MainBasket>
           <CartBasket />
         </MainBasket>
         <h1> выбранные </h1>
         <ul className="list-group">
-          {/*<li class="list-group-item">And a fifth one</li>}
+          <li class="list-group-item">And a fifth one</li>
           {selectedCountry.map((country, index) => {
             return (
               <li key={index} className="list-group-item">
@@ -49,14 +60,13 @@ function App() {
               </li>
             );
           })}
-        </ul>
+        </ul>*/}
         <CountryTable
           title="taблица"
           onSelectContry={selectCountry}
-        ></CountryTable>*/}
+        ></CountryTable>
 
-
-        <HomeWorckAlbums title='table'></HomeWorckAlbums>
+        <HomeWorckAlbums title="table"></HomeWorckAlbums>
       </div>
     </>
   );
